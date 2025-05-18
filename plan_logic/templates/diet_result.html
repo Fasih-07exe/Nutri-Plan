@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Your Diet Plan</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-image: url('/media/food.jpeg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header, footer {
+            background-color: #2c3e50;
+            color: white;
+            padding: 15px 30px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+
+        .container {
+            flex: 1;
+            width: 100%;
+            max-width: 960px;
+            margin: 30px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            color: #2c3e50;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            vertical-align: top;
+        }
+
+        th {
+            background-color: #ecf0f1;
+        }
+
+        .section {
+            margin-top: 40px;
+        }
+
+        .btn, .link-btn, .swap-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #27ae60;
+            color: white;
+            text-decoration: none;
+            border: none;
+            border-radius: 6px;
+            transition: background-color 0.3s ease;
+            cursor: pointer;
+        }
+
+        .btn:hover, .link-btn:hover, .swap-btn:hover {
+            background-color: #1e8449;
+        }
+
+        .generate-link {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        footer {
+            margin-top: auto;
+        }
+
+        .footer-note {
+            font-size: 14px;
+            opacity: 0.8;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Personalized Diet Plan</h1>
+    </header>
+
+    <div class="container">
+        <h2>Hello {{ user_name }}!</h2>
+        <p>Your <strong>{{ goal|title }}</strong> diet plan for a <strong>{{ diet_type|title }}</strong> lifestyle is ready.</p>
+
+        <a href="{% url 'download_diet_plan' %}" class="btn">Download as PDF</a>
+
+        <div class="section">
+            <h3>Recommended Meals</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Meal Name</th>
+                        <th>Calories</th>
+                        <th>Ingredients</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for meal in meal_options %}
+                    <tr id="meal-row-{{ forloop.counter0 }}">
+                        <td><strong id="meal-name-{{ forloop.counter0 }}">{{ meal.name }}</strong></td>
+                        <td id="meal-cal-{{ forloop.counter0 }}">{{ meal.calories }}</td>
+                        <td id="meal-ings-{{ forloop.counter0 }}">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Quantity</th>
+                                        <th>Instructions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {% for ing in meal.ingredients %}
+                                    <tr>
+                                        <td>{{ ing.name }}</td>
+                                        <td>{{ ing.quantity }}</td>
+                                        <td>{{ ing.instructions }}</td>
+                                    </tr>
+                                    {% endfor %}
+                                </tbody>
+                            </table>
+                        </td>
+                        <td>
+                            <button class="swap-btn" data-index="{{ forloop.counter0 }}">Change This Meal</button>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+
+        <div class="section">
+            <h3>Today's Shopping List</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Item</th>
+                        <th>Details</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for item in shopping_list %}
+                    <tr>
+                        <td>{{ item.name }}</td>
+                        <td>{{ item.details }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+
+        <div class="generate-link">
+            <a href="{% url 'diet' %}" class="link-btn">← Generate Another Plan</a>
+        </div>
+    </div>
+
+    <footer>
+        <p class="footer-note">© 2025 Diet Planner | Your Wellness Partner</p>
+    </footer>
+
+    <script>
+        // Adding event listener to all swap buttons
+        document.querySelectorAll('.swap-btn').forEach(button => {
+            button.addEventListener('click', function() {
+                const index = this.getAttribute('data-index');
+                swapMeal(index);
+            });
+        });
+
+        function swapMeal(index) {
+            fetch("{% url 'swap_meal' %}", {
+                method: "POST",
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                    'X-CSRFToken': '{{ csrf_token }}'
+                },
+                body: `index=${index}`
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.meal) {
+                    document.getElementById(`meal-name-${index}`).innerText = data.meal.name;
+                    document.getElementById(`meal-cal-${index}`).innerText = data.meal.calories;
+
+                    let ingHtml = `
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Quantity</th>
+                                    <th>Instructions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                    `;
+                    data.meal.ingredients.forEach(ing => {
+                        ingHtml += `
+                            <tr>
+                                <td>${ing.name}</td>
+                                <td>${ing.quantity}</td>
+                                <td>${ing.instructions}</td>
+                            </tr>
+                        `;
+                    });
+                    ingHtml += `</tbody></table>`;
+                    document.getElementById(`meal-ings-${index}`).innerHTML = ingHtml;
+                } else {
+                    alert("No more meals available.");
+                }
+            })
+            .catch(err => {
+                console.error(err);
+                alert("Could not swap meal.");
+            });
+        }
+    </script>
+</body>
+</html>

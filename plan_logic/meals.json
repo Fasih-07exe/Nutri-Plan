@@ -1,0 +1,368 @@
+[
+    {
+        "name": "Oatmeal with Fruits",
+        "calories": 350,
+        "type": "vegetarian",
+        "goal": ["bulking", "cutting"],
+        "ingredients": [
+            {"name": "Oats", "quantity": "50g", "instructions": "Cook with water"},
+            {"name": "Mixed Fruits", "quantity": "100g", "instructions": "Add fresh"}
+        ]
+    },
+    {
+        "name": "Grilled Chicken Salad",
+        "calories": 400,
+        "type": "non-vegetarian",
+        "goal": ["bulking", "cutting"],
+        "ingredients": [
+            {"name": "Chicken Breast", "quantity": "150g", "instructions": "Grill"},
+            {"name": "Lettuce", "quantity": "50g", "instructions": "Chop fresh"},
+            {"name": "Olive Oil", "quantity": "1 tbsp", "instructions": "Drizzle on top"}
+        ]
+    },
+    {
+        "name": "Protein Shake",
+        "calories": 250,
+        "type": "vegetarian",
+        "goal": ["bulking"],
+        "ingredients": [
+            {"name": "Whey Protein", "quantity": "1 scoop", "instructions": "Mix with water"},
+            {"name": "Banana", "quantity": "1 medium", "instructions": "Blend"}
+        ]
+    },
+    {
+        "name": "Boiled Eggs with Toast",
+        "calories": 300,
+        "type": "non-vegetarian",
+        "goal": ["cutting"],
+        "ingredients": [
+            {"name": "Eggs", "quantity": "2", "instructions": "Boil"},
+            {"name": "Whole Wheat Bread", "quantity": "2 slices", "instructions": "Toast"}
+        ]
+    },
+    {
+        "name": "Veggie Stir Fry",
+        "calories": 450,
+        "type": "vegetarian",
+        "goal": ["bulking", "cutting"],
+        "ingredients": [
+            {"name": "Broccoli", "quantity": "100g", "instructions": "Stir fry"},
+            {"name": "Carrots", "quantity": "50g", "instructions": "Add with broccoli"},
+            {"name": "Bell Pepper", "quantity": "50g", "instructions": "Slice and stir fry"}
+        ]
+    },
+    {
+        "name": "Tofu Rice Bowl",
+        "calories": 420,
+        "type": "ovo-vegetarian",
+        "goal": ["bulking", "cutting"],
+        "ingredients": [
+            {"name": "Tofu", "quantity": "100g", "instructions": "Grill"},
+            {"name": "Brown Rice", "quantity": "1 cup", "instructions": "Steam"},
+            {"name": "Soy Sauce", "quantity": "1 tbsp", "instructions": "Drizzle"}
+        ]
+    },
+    {
+        "name": "Chickpea Curry with Brown Rice",
+        "calories": 480,
+        "type": "vegan",
+        "goal": ["bulking", "cutting"],
+        "ingredients": [
+            {"name": "Chickpeas", "quantity": "100g", "instructions": "Boil"},
+            {"name": "Brown Rice", "quantity": "1 cup", "instructions": "Cook"},
+            {"name": "Spices", "quantity": "1 tsp", "instructions": "Mix in curry"}
+        ]
+    },
+    {
+        "name": "Greek Yogurt with Berries",
+        "calories": 200,
+        "type": "vegetarian",
+        "goal": ["cutting"],
+        "ingredients": [
+            {"name": "Greek Yogurt", "quantity": "150g", "instructions": "Serve chilled"},
+            {"name": "Berries", "quantity": "50g", "instructions": "Top the yogurt"}
+        ]
+    },
+    {
+        "name": "Scrambled Eggs with Spinach",
+        "calories": 320,
+        "type": "non-vegetarian",
+        "goal": ["bulking", "cutting"],
+        "ingredients": [
+            {"name": "Eggs", "quantity": "3", "instructions": "Scramble"},
+            {"name": "Spinach", "quantity": "30g", "instructions": "Mix into eggs"}
+        ]
+    },
+    {
+        "name": "Lentil Soup",
+        "calories": 280,
+        "type": "vegan",
+        "goal": ["cutting"],
+        "ingredients": [
+            {"name": "Lentils", "quantity": "100g", "instructions": "Boil"},
+            {"name": "Carrots", "quantity": "50g", "instructions": "Add to soup"},
+            {"name": "Celery", "quantity": "30g", "instructions": "Chop and cook"}
+        ]
+    },
+    {
+        "name": "Paneer Tikka",
+        "calories": 450,
+        "type": "vegetarian",
+        "goal": ["bulking"],
+        "ingredients": [
+            {"name": "Paneer", "quantity": "150g", "instructions": "Grill"},
+            {"name": "Bell Peppers", "quantity": "50g", "instructions": "Skewer with paneer"},
+            {"name": "Yogurt Marinade", "quantity": "2 tbsp", "instructions": "Coat paneer"}
+        ]
+    },
+    {
+        "name": "Beef Stir Fry",
+        "calories": 500,
+        "type": "non-vegetarian",
+        "goal": ["bulking"],
+        "ingredients": [
+            {"name": "Beef Strips", "quantity": "150g", "instructions": "Stir fry"},
+            {"name": "Mixed Veggies", "quantity": "100g", "instructions": "Add to beef"},
+            {"name": "Soy Sauce", "quantity": "1 tbsp", "instructions": "Flavor"}
+        ]
+    },
+    {
+        "name": "Avocado Toast",
+        "calories": 350,
+        "type": "vegan",
+        "goal": ["cutting"],
+        "ingredients": [
+            {"name": "Avocado", "quantity": "1/2", "instructions": "Mash"},
+            {"name": "Whole Wheat Bread", "quantity": "2 slices", "instructions": "Toast"}
+        ]
+    },
+    {
+        "name": "Quinoa Salad",
+        "calories": 400,
+        "type": "vegan",
+        "goal": ["cutting"],
+        "ingredients": [
+            {"name": "Quinoa", "quantity": "1 cup", "instructions": "Cook"},
+            {"name": "Cucumber", "quantity": "50g", "instructions": "Chop"},
+            {"name": "Tomatoes", "quantity": "50g", "instructions": "Dice"}
+        ]
+    },
+    {
+        "name": "Egg and Avocado Toast",
+        "calories": 360,
+        "type": "ovo-vegetarian",
+        "goal": ["cutting", "bulking"],
+        "ingredients": [
+            {"name": "Egg", "quantity": "1", "instructions": "Fry or poach"},
+            {"name": "Avocado", "quantity": "1/2", "instructions": "Mash"},
+            {"name": "Whole Wheat Bread", "quantity": "2 slices", "instructions": "Toast"}
+        ]
+    },
+    {
+        "name": "Spinach and Egg Breakfast Wrap",
+        "calories": 400,
+        "type": "ovo-vegetarian",
+        "goal": ["bulking"],
+        "ingredients": [
+            {"name": "Eggs", "quantity": "2", "instructions": "Scramble"},
+            {"name": "Spinach", "quantity": "30g", "instructions": "Sauté"},
+            {"name": "Whole Wheat Wrap", "quantity": "1", "instructions": "Fill with mixture"}
+        ]
+    },
+    {
+        "name": "Egg and Veggie Rice Bowl",
+        "calories": 450,
+        "type": "ovo-vegetarian",
+        "goal": ["cutting", "bulking"],
+        "ingredients": [
+            {"name": "Eggs", "quantity": "2", "instructions": "Boil or scramble"},
+            {"name": "Brown Rice", "quantity": "1 cup", "instructions": "Cook"},
+            {"name": "Mixed Vegetables", "quantity": "100g", "instructions": "Sauté lightly"}
+        ]
+    },
+    {
+        "name": "Egg Fried Rice",
+        "calories": 520,
+        "type": "non-vegetarian",
+        "goal": ["bulking"],
+        "ingredients": [
+            {"name": "Eggs", "quantity": "2", "instructions": "Scramble"},
+            {"name": "Cooked Rice", "quantity": "1 cup", "instructions": "Fry with eggs"},
+            {"name": "Vegetables", "quantity": "50g", "instructions": "Mix in"}
+        ]
+    },
+    {
+        "name": "Banana Peanut Butter Toast",
+        "calories": 370,
+        "type": "vegetarian",
+        "goal": ["bulking"],
+        "ingredients": [
+            {"name": "Banana", "quantity": "1", "instructions": "Slice"},
+            {"name": "Peanut Butter", "quantity": "2 tbsp", "instructions": "Spread"},
+            {"name": "Whole Wheat Bread", "quantity": "2 slices", "instructions": "Toast"}
+        ]
+    },
+    {
+        "name": "Mixed Nut Trail Mix",
+        "calories": 300,
+        "type": "vegan",
+        "goal": ["bulking"],
+        "ingredients": [
+            {"name": "Almonds", "quantity": "20g", "instructions": "Mix"},
+            {"name": "Walnuts", "quantity": "20g", "instructions": "Mix"},
+            {"name": "Raisins", "quantity": "20g", "instructions": "Mix"}
+        ]
+    },
+    {
+        "name": "Grilled Fish with Veggies",
+        "calories": 480,
+        "type": "non-vegetarian",
+        "goal": ["cutting"],
+        "ingredients": [
+            {"name": "Fish Fillet", "quantity": "150g", "instructions": "Grill"},
+            {"name": "Zucchini", "quantity": "50g", "instructions": "Grill"},
+            {"name": "Carrots", "quantity": "50g", "instructions": "Steam"}
+        ]
+    },
+    {
+        "name": "Tofu Scramble",
+        "calories": 350,
+        "type": "vegan",
+        "goal": ["cutting", "bulking"],
+        "ingredients": [
+            {"name": "Tofu", "quantity": "100g", "instructions": "Scramble"},
+            {"name": "Onions", "quantity": "30g", "instructions": "Sauté"},
+            {"name": "Turmeric", "quantity": "1/2 tsp", "instructions": "Add for color"}
+        ]
+    },
+    {
+        "name": "Cottage Cheese Bowl",
+        "calories": 380,
+        "type": "vegetarian",
+        "goal": ["bulking"],
+        "ingredients": [
+            {"name": "Cottage Cheese", "quantity": "150g", "instructions": "Serve chilled"},
+            {"name": "Pineapple Chunks", "quantity": "50g", "instructions": "Add"}
+        ]
+    },
+    {
+        "name": "Sweet Potato and Black Bean Bowl",
+        "calories": 420,
+        "type": "vegan",
+        "goal": ["bulking", "cutting"],
+        "ingredients": [
+            {"name": "Sweet Potato", "quantity": "100g", "instructions": "Bake"},
+            {"name": "Black Beans", "quantity": "100g", "instructions": "Boil"},
+            {"name": "Corn", "quantity": "50g", "instructions": "Add"}
+        ]
+    },
+    {
+        "name": "Spinach and Feta Omelette",
+        "calories": 320,
+        "type": "vegetarian",
+        "goal": ["cutting", "bulking"],
+        "ingredients": [
+            {"name": "Eggs", "quantity": "2", "instructions": "Beat"},
+            {"name": "Spinach", "quantity": "30g", "instructions": "Sauté"},
+            {"name": "Feta Cheese", "quantity": "30g", "instructions": "Add to eggs"}
+        ]
+    },
+    {
+        "name": "Salmon and Quinoa Bowl",
+        "calories": 500,
+        "type": "non-vegetarian",
+        "goal": ["bulking"],
+        "ingredients": [
+            {"name": "Salmon", "quantity": "150g", "instructions": "Grill"},
+            {"name": "Quinoa", "quantity": "1 cup", "instructions": "Cook"},
+            {"name": "Spinach", "quantity": "30g", "instructions": "Add fresh"}
+        ]
+    },
+    {
+        "name": "Almond Butter Banana Smoothie",
+        "calories": 400,
+        "type": "vegan",
+        "goal": ["bulking"],
+        "ingredients": [
+            {"name": "Banana", "quantity": "1", "instructions": "Peel"},
+            {"name": "Almond Butter", "quantity": "1 tbsp", "instructions": "Add to blender"},
+            {"name": "Plant Milk", "quantity": "1 cup", "instructions": "Blend all"}
+        ]
+    },
+    {
+        "name": "Zucchini Noodles with Pesto",
+        "calories": 350,
+        "type": "vegan",
+        "goal": ["cutting"],
+        "ingredients": [
+            {"name": "Zucchini", "quantity": "150g", "instructions": "Spiralize"},
+            {"name": "Pesto Sauce", "quantity": "2 tbsp", "instructions": "Toss with noodles"},
+            {"name": "Cherry Tomatoes", "quantity": "50g", "instructions": "Halve and add"}
+        ]
+    },
+    {
+        "name": "Chicken and Sweet Potato Mash",
+        "calories": 450,
+        "type": "non-vegetarian",
+        "goal": ["bulking", "cutting"],
+        "ingredients": [
+            {"name": "Chicken Breast", "quantity": "120g", "instructions": "Grill"},
+            {"name": "Sweet Potato", "quantity": "100g", "instructions": "Boil and mash"},
+            {"name": "Butter", "quantity": "1 tsp", "instructions": "Mix with mash"}
+        ]
+    },
+    {
+        "name": "Mushroom and Lentil Stew",
+        "calories": 400,
+        "type": "vegan",
+        "goal": ["cutting"],
+        "ingredients": [
+            {"name": "Lentils", "quantity": "100g", "instructions": "Cook"},
+            {"name": "Mushrooms", "quantity": "100g", "instructions": "Sauté"},
+            {"name": "Onions", "quantity": "50g", "instructions": "Add to stew"}
+        ]
+    },
+    {
+        "name": "Cottage Cheese and Berries",
+        "calories": 280,
+        "type": "vegetarian",
+        "goal": ["cutting"],
+        "ingredients": [
+            {"name": "Cottage Cheese", "quantity": "150g", "instructions": "Serve chilled"},
+            {"name": "Mixed Berries", "quantity": "50g", "instructions": "Top"}
+        ]
+    },
+    {
+        "name": "Turkey Wrap",
+        "calories": 370,
+        "type": "non-vegetarian",
+        "goal": ["cutting", "bulking"],
+        "ingredients": [
+            {"name": "Whole Wheat Wrap", "quantity": "1", "instructions": "Lay flat"},
+            {"name": "Turkey Slices", "quantity": "100g", "instructions": "Add to wrap"},
+            {"name": "Lettuce", "quantity": "30g", "instructions": "Top and roll"}
+        ]
+    },
+    {
+        "name": "Chia Pudding with Mango",
+        "calories": 300,
+        "type": "vegan",
+        "goal": ["cutting"],
+        "ingredients": [
+            {"name": "Chia Seeds", "quantity": "2 tbsp", "instructions": "Soak in plant milk"},
+            {"name": "Plant Milk", "quantity": "1 cup", "instructions": "Mix with chia"},
+            {"name": "Mango", "quantity": "50g", "instructions": "Chop and top"}
+        ]
+    },
+    {
+        "name": "Egg and Avocado Bowl",
+        "calories": 360,
+        "type": "non-vegetarian",
+        "goal": ["cutting", "bulking"],
+        "ingredients": [
+            {"name": "Boiled Eggs", "quantity": "2", "instructions": "Slice"},
+            {"name": "Avocado", "quantity": "1/2", "instructions": "Dice"},
+            {"name": "Spinach", "quantity": "30g", "instructions": "Add fresh"}
+        ]
+    }
+]

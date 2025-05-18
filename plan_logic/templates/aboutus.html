@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>About Us - Nutri Plan</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-image: url('/media/about.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            color: #2c3e50;
+        }
+
+        header, footer {
+            background-color: rgba(44, 62, 80, 0.9);
+            color: white;
+            padding: 20px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+
+        .home-button {
+            background-color: #27ae60;
+            color: white;
+            border: none;
+            padding: 10px 18px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: bold;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .home-button:hover {
+            background-color: #1e8449;
+        }
+
+        main {
+            flex: 1;
+            background-color: rgba(255, 255, 255, 0.85);
+            margin: 40px auto;
+            padding: 30px 40px;
+            max-width: 900px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+
+        h1, h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .description {
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 40px;
+            text-align: justify;
+        }
+
+        .team {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 20px;
+            justify-items: center;
+        }
+
+        .member {
+            background-color: #ecf0f1;
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+            width: 100%;
+            font-weight: bold;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        footer {
+            font-size: 14px;
+            margin-top: auto;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>About Nutri Plan</h1>
+        <a href="/" class="home-button">Home</a>
+    </header>
+
+    <main>
+        <h2>What is Nutri Plan?</h2>
+        <div class="description">
+            Nutri Plan is a smart dietary planning application that helps users generate personalized meal plans based on their dietary preferences (vegetarian, non-vegetarian, ovo-vegetarian) and fitness goals (bulking or cutting). The app uses intelligent logic to recommend balanced meals, track nutrients, and ensure users stay on course with their health journey. Users simply enter their name, select a goal, choose a diet type, and click to generate a complete diet plan tailored to their needs.
+        </div>
+
+        <h2>Our Team</h2>
+        <div class="team">
+            <div class="member">Fasih</div>
+            <div class="member">Hussain</div>
+            <div class="member">Aoun</div>
+            <div class="member">Qamar</div>
+            <div class="member">Usama</div>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2025 Nutri Plan | Made with dedication by our awesome team</p>
+    </footer>
+</body>
+</html>
