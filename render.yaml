@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: nutri-plan
+    runtime: python
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "gunicorn Nutri_Plan.wsgi:application"
+    envVars:
+      - key: DJANGO_SETTINGS_MODULE
+        value: Nutri_Plan.settings
